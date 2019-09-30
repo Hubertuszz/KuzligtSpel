@@ -727,6 +727,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2443823336111337928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2443823336111337926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2722d18a7fce844ba2944920901e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beams: {fileID: 598251779}
 --- !u!114 &2443823336111337929
 MonoBehaviour:
   m_ObjectHideFlags: 0
