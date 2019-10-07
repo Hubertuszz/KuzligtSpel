@@ -33,6 +33,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
+        this.transform.SetParent(GameObject.Find("Canvas").GetComponent<Transform>(), false);
     }
 
     void Start()
