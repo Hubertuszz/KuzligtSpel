@@ -96,7 +96,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
             Debug.Log("We load the 'Room' ");
-            PhotonNetwork.LoadLevel("KyleTest");
+            PhotonNetwork.LoadLevel("TestKyle");
         }
     }
 

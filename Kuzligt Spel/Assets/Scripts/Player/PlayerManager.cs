@@ -37,7 +37,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
     [Tooltip("The Beams GameObject to control")]
     [SerializeField]
     private GameObject beams;
-    private PhotonView m_PhotonView;
+    public PhotonView m_PhotonView;
 
     [Tooltip("The Players UI GameObject Prefab")]
     [SerializeField]
@@ -49,12 +49,6 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
 
     #region Private Methods
 
-    #if UNITY_5_4_OR_NEWER
-    void OnSceneLoaded(UnityEnigine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode loadingMode)
-        {
-            this.CalledOnLevelWasLoaded(scene.buildIndex);
-        }
-    #endif
     #endregion
 
     #region MonoBehaviour CallBacks
@@ -67,14 +61,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
         }
     #endif
 
-    #if UNITY_5_4_OR_NEWER
-
-        public override void OnDisable()
-        {
-            base.OnDisable();
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
-        }
-    #endif
+    
 
     void CalledOnLevelWasLoaded(int level)
     {
@@ -162,11 +149,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
             Debug.LogError("<Color=Red><a/></Color> Camera Work Component on playerPrefab.", this);
         }
 
-        #if UNITY_5_4_OR_NEWER
-
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
-
-        #endif
+        
     }
 
 

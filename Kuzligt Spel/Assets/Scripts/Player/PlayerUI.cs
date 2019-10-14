@@ -77,12 +77,12 @@ public class PlayerUI : MonoBehaviour
         target = _target;
         if(playerNameText != null)
         {
-            playerNameText.text = target.m_PhotonView.Owner.NickName;
+            playerNameText.text = this.target.m_PhotonView.Owner.NickName;
         }
 
         targetTransform = this.target.GetComponent<Transform>();
-        targetRenderer = this.target.GetComponent<targetRenderer>();
-        CharacterController characterController = _target.GetComponentz<CharacterController>();
+        targetRenderer = this.target.GetComponent<Renderer>();
+        CharacterController characterController = _target.GetComponent<CharacterController>();
         if(characterController != null)
         {
             characterControllerHeight = characterController.height;
@@ -98,7 +98,7 @@ public class PlayerUI : MonoBehaviour
 
         if(targetTransform != null)
         {
-            targetPosition = targetTrasnform.position;
+            targetPosition = targetTransform.position;
             targetPosition.y += characterControllerHeight;
             this.targetTransform.position = Camera.main.WorldToScreenPoint(targetPosition) + screenOffset;
         }

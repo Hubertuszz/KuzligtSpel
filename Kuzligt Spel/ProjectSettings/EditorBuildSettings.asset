@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Launcher.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/KyleTest.unity
-    guid: 26392aa83f5442340baa258cd8ea6d3e
+    path: Assets/Scenes/TestKyle.unity
+    guid: 59427616071551a48a144372d4dcb8c1
   m_configObjects: {}
